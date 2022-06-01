@@ -1,23 +1,23 @@
 import React, { useState } from 'react'
 import Symbols from './components/Symbols'
 import Display from './components/Display'
+import Numbers from './components/Numbers'
+import Words from './components/Words'
 
 export const App = () => {
-	const wordArray = ["apples", "betty", "charles"]
-	const name = "Batman"
-  const [text, setText] = useState("This is some text")
+  const [displayVal, setDisplayVal] = useState("Placeholder") 
+  const arr = ["apples", "betty", "charles"];
 
-  const clickHandler = (word) => {
-    setText(word)
+  const clickHandler = (e) => {
+    setDisplayVal(e.target.value)
   }
 
   return (
 	<div>
-		<Symbols wordArray={wordArray} name={name} clickHandler={clickHandler} />
-    <Display text={text}/>
+    <Display displayVal={displayVal} />
+    <Words arr={arr} clickHandler={clickHandler}/>
 	</div>
   )
 }
-
 
 export default App;

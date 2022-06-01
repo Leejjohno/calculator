@@ -1,7 +1,7 @@
 
-const Display = ({text}) => {
+const Display = ({displayVal}) => {
   return (
-    <p>{text}</p>
+    <p>{displayVal}</p>
   )
 }
 
