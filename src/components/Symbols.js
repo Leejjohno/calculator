@@ -1,14 +1,14 @@
-const Symbols = ({ wordArray, name, clickHandler }) => {
+const Symbols = ({ symbolHandler }) => {
     const symbols = ["=", "+", "-", "*", "C", "DEL"]
     return ( <div className="symBox">
-                {wordArray.map((word, index) => (
+                {symbols.map((symbol, index) => (
                     <button 
                     key={index} 
-                    onClick={() => clickHandler(word)}
-                    >{word}
+                    onClick={() => symbolHandler(symbol)}
+                    >{symbol}
                     </button>
                 ))}
-                    {name}
+                    
 
             </div>
     )
