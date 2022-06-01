@@ -1,15 +1,15 @@
 const Symbols = ({ symbolHandler }) => {
-    const symbols = ["=", "+", "-", "*", "C", "DEL"]
-    return ( <div className="symBox">
-                {symbols.map((symbol, index) => (
+    const symbolsArray = ["=", "+", "-", "*", "C", "DEL"]
+        return ( 
+            <div className="symBox">
+                {symbolsArray.map((symbol, index) => (
                     <button 
-                    key={index} 
+                    key={index}
+                    value={symbol} 
                     onClick={() => symbolHandler(symbol)}
                     >{symbol}
                     </button>
                 ))}
-                    
-
             </div>
     )
 };

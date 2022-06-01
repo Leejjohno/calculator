@@ -1,21 +1,29 @@
-import React, { useState } from 'react'
-import Symbols from './components/Symbols'
-import Display from './components/Display'
-import Numbers from './components/Numbers'
-import Words from './components/Words'
+import React, { useState } from 'react';
+import Display from './components/Display';
+import Calculator from './components/Calculator';
+import { evaluate } from 'mathjs';
 
 export const App = () => {
-  const [displayVal, setDisplayVal] = useState("Placeholder") 
-  const arr = ["apples", "betty", "charles"];
+  const [displayVal, setDisplayVal] = useState("0") 
 
   const clickHandler = (e) => {
-    setDisplayVal(e.target.value)
-  }
+    if (displayVal === "0") {
+      setDisplayVal(e.target.value)
+    } else if (e.target.value === "=") {
+      setDisplayVal(evaluate(displayVal))
+      console.log(displayVal)
+    } else if (e.target.value === "C") {
+      setDisplayVal("0")
+    } else {
+    setDisplayVal(displayVal + e.target.value)
+    console.log(e.target.value)
+    }
+  }     
 
   return (
 	<div>
     <Display displayVal={displayVal} />
-    <Words arr={arr} clickHandler={clickHandler}/>
+    <Calculator clickHandler={clickHandler} />
 	</div>
   )
 }
