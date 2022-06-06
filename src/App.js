@@ -21,10 +21,12 @@ export const App = () => {
   }     
 
   return (
-	<div>
-    <Display displayVal={displayVal} />
-    <Calculator clickHandler={clickHandler} />
-	</div>
+    <div className='App'>
+      <div className='container'>
+        <Display displayVal={displayVal} />
+        <Calculator clickHandler={clickHandler} />
+      </div>
+    </div>
   )
 }
 

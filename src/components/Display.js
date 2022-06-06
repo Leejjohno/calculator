@@ -1,7 +1,9 @@
 
 const Display = ({displayVal}) => {
   return (
-    <p>{displayVal}</p>
+    <div className="display">
+      <p>{displayVal}</p>
+    </div>
   )
 }
 
