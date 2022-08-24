@@ -18,6 +18,8 @@ body {
 
 .container {
   width: 100%;
+  margin-top: 10vh;
+  padding-top: 30px;
 	max-width: 350px;
   background-color: darkgray;
   border-radius: 20px;
@@ -43,7 +45,8 @@ button {
   margin: 10px;
   cursor: crosshair;
   transition: 1s;
-  width: 70px;
+  min-width: 70px;
+  max-width: 100px;
   border-radius: 5px;
 }
 

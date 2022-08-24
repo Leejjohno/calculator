@@ -1,5 +1,5 @@
 const Calculator = ({clickHandler}) => {
-    const buttonArray = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "=", "+", "-", "*", "/", "C" ]
+    const buttonArray = [ ".", "0", "=", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+", "-", "*", "/", "C" ]
         return (  
             <div className="buttonBox">
                 {buttonArray.map((button, index) => (
